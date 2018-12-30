@@ -19,4 +19,11 @@ FactoryBot.define do
     published { true }
     user
   end
+
+  factory :unpublished_post, class: 'Post' do
+    title { Faker::Lorem.sentence }
+    content { Faker::Lorem.paragraph }
+    published { false }
+    user
+  end
 end
